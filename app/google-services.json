@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "681883133526",
+    "firebase_url": "https://agoramobile-ab158.firebaseio.com",
+    "project_id": "agoramobile-ab158",
+    "storage_bucket": "agoramobile-ab158.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681883133526:android:e85fc11cfe7b761d",
+        "android_client_info": {
+          "package_name": "vadeworks.agoramobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681883133526-mou95lp8sa9pb94a1p0icl48asr3uv4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCTN4qn_RJG8uc3SfZ4rlbZSKD2kqG498"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
