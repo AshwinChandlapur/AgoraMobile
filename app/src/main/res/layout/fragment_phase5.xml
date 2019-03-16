@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CreateElections.Phase5"
+    android:background="@color/green">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:id="@+id/l5">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:id="@+id/card5"
+            app:cardCornerRadius="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@color/background_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/agora"/>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <CheckBox android:id="@+id/realtimeResults"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get Real Time Results"
+                        android:onClick="onCheckboxClicked"/>
+                    <CheckBox android:id="@+id/inviteVoters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite Voters"
+                        android:onClick="onCheckboxClicked"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How secret are the Ballot?"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton android:id="@+id/q1option1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ballots are completely secret and Never shown to anyone"
+                        android:onClick="q1onRadioButtonClicked"/>
+                    <RadioButton android:id="@+id/q1option2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ballots are only visible to me"
+                        android:onClick="q1onRadioButtonClicked"/>
+                    <RadioButton android:id="@+id/q1option3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ballots are visible to Everyone with Accees to Election"
+                        android:onClick="q1onRadioButtonClicked"/>
+                </RadioGroup>
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Who can see List of voters?"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton android:id="@+id/q2option1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ballots are completely secret and Never shown to anyone"
+                        android:onClick="q2onRadioButtonClicked"/>
+                    <RadioButton android:id="@+id/q2option2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ballots are only visible to me"
+                        android:onClick="q2onRadioButtonClicked"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/forwardCard5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginLeft="100dp"
+                app:srcCompat="@drawable/ic_thumb_up_black_24dp" />
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

@@ -3,7 +3,6 @@ package vadeworks.agoramobile;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.cuneytayyildiz.onboarder.OnboarderActivity;
 import com.cuneytayyildiz.onboarder.OnboarderPage;

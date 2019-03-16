@@ -10,8 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
-import vadeworks.agoramobile.CreateElection;
+import com.loicteillard.easytabs.EasyTabs;
+
+import androidx.viewpager.widget.ViewPager;
+import vadeworks.agoramobile.CreateElections.CreateElection;
 import vadeworks.agoramobile.R;
 
 /**
@@ -36,6 +40,21 @@ public class Home extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CreateElection.class);
                 startActivity(intent);
+            }
+        });
+
+
+        EasyTabs easyTabs = view.findViewById(R.id.easytabs);
+        ViewPager viewpager = view.findViewById(R.id.viewpager);
+        FragmentAdapter_HomePage pagerAdapter = new FragmentAdapter_HomePage(getActivity().getSupportFragmentManager());
+        viewpager.setAdapter(pagerAdapter);
+//
+        easyTabs.setViewPager(viewpager, 0); // Set viewPager to EasyTabs with default index
+//
+        easyTabs.setPagerListener(new EasyTabs.PagerListener() { // Optional, add a listener
+            @Override
+            public void onTabSelected(int position) {
+                Toast.makeText(getActivity(), "tab selected:"+position, Toast.LENGTH_SHORT).show();
             }
         });
 

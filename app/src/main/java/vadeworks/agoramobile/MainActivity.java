@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         sNavigationDrawer = findViewById(R.id.navigationDrawer);
 
         List<com.shrikanthravi.customnavigationdrawer2.data.MenuItem> menuItems = new ArrayList<>();
@@ -31,10 +30,10 @@ public class MainActivity extends AppCompatActivity{
         //Use the MenuItem given by this library and not the default one.
         //First parameter is the title of the menu item and then the second parameter is the image which will be the background of the menu item.
 
-        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("News",R.drawable.news_bg));
-        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("Feed",R.drawable.feed_bg));
-        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("Messages",R.drawable.message_bg));
-        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("Music",R.drawable.music_bg));
+        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("Dashboard",R.drawable.news_bg));
+        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("Profile",R.drawable.feed_bg));
+        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("About",R.drawable.message_bg));
+        menuItems.add(new com.shrikanthravi.customnavigationdrawer2.data.MenuItem("Help",R.drawable.music_bg));
 
         //then add them to navigation drawer
         sNavigationDrawer.setMenuItemList(menuItems);
@@ -74,7 +73,6 @@ public class MainActivity extends AppCompatActivity{
                         fragmentClass = Home.class;
                         break;
                     }
-
                 }
 
                 //Listener for drawer events such as opening and closing.
