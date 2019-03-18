@@ -40,63 +40,74 @@
                     android:src="@drawable/agora"/>
 
 
-                <Button
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pick Start Date"
-                    android:layout_gravity="center"
-                    android:id="@+id/pickStartDate"/>
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Start Date"
-                    android:id="@+id/startDateTV"
-                    android:layout_gravity="center"/>
+                    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pickStartDate"
+                        android:layout_weight="0.5"
+                        app:layout_behavior="ru.dimorinny.floatingtextbutton.behavior.SnackbarBehavior"
+                        app:floating_background_color="@color/yellow"
+                        app:floating_left_icon="@drawable/ic_date_range_black_24dp"
+                        app:floating_title="Pick Start Date"
+                        app:floating_title_color="@android:color/white"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pick End Date"
-                    android:layout_gravity="center"
-                    android:id="@+id/pickEndDate"/>
+                    <EditText
+                        android:id="@+id/startDateET"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:hint="Start Date"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="End Date"
-                    android:id="@+id/endDateTV"
-                    android:layout_gravity="center"/>
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center">
+
+                    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pickEndDate"
+                        android:layout_weight="0.5"
+                        app:layout_behavior="ru.dimorinny.floatingtextbutton.behavior.SnackbarBehavior"
+                        app:floating_background_color="@color/yellow"
+                        app:floating_left_icon="@drawable/ic_date_range_black_24dp"
+                        app:floating_title="Pick End Date"
+                        app:floating_title_color="@android:color/white"/>
+
+                    <EditText
+                        android:id="@+id/endDateET"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:hint="End Date"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        />
+
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="15dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/backwardCard2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="100dp"
-                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/forwardCard2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/fab_margin"
-                android:layout_marginLeft="100dp"
-                app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-        </LinearLayout>
 
     </LinearLayout>
 

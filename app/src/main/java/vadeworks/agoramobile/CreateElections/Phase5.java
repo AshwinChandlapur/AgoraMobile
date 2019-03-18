@@ -40,7 +40,6 @@ public class Phase5 extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -67,7 +66,6 @@ public class Phase5 extends Fragment {
 
                 }
                 break;
-            // TODO: Veggie sandwich
         }
     }
 

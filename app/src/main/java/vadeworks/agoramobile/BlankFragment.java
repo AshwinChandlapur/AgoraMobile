@@ -1,4 +1,4 @@
-package vadeworks.agoramobile.MainScreenFragments;
+package vadeworks.agoramobile;
 
 
 import android.os.Bundle;
@@ -9,15 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import vadeworks.agoramobile.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TotalElections extends Fragment {
+public class BlankFragment extends Fragment {
 
 
-    public TotalElections() {
+    public BlankFragment() {
         // Required empty public constructor
     }
 
@@ -26,9 +25,7 @@ public class TotalElections extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_total_elections, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_blank, container, false);
     }
 
 }

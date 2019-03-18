@@ -54,14 +54,14 @@
 
         <!-- Login Button -->
 
-        <Button
+        <ru.dimorinny.floatingtextbutton.FloatingTextButton
             android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
-            android:text="Login"
-            android:textColor="@android:color/black" />
+            app:floating_background_color="@color/yellow"
+            app:floating_title="Login"
+            app:floating_title_color="@android:color/white"
+            />
 
         <Button
             android:id="@+id/btn_reset_password"
@@ -69,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@null"
+            android:visibility="invisible"
             android:text="Forgot Password"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent" />
@@ -78,6 +79,7 @@
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
+            android:visibility="invisible"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@null"

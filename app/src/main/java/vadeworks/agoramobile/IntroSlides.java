@@ -27,24 +27,34 @@ public class IntroSlides extends OnboarderActivity implements OnboarderPageChang
 
         List<OnboarderPage> pages = Arrays.asList(
                 new OnboarderPage.Builder()
-                        .title("Donut")
-                        .description("Android 1.6")
+                        .title("Intro Slide 1")
+                        .description("Agora Mobile Application")
                         .imageResourceId( R.drawable.agora)
                         .backgroundColorId(R.color.green)
-                        .titleColorId(R.color.black_transparent)
-                        .descriptionColorId(R.color.black_transparent)
+                        .titleColorId(R.color.white)
+                        .descriptionColorId(R.color.white)
                         .multilineDescriptionCentered(true)
                         .build(),
 
                 // No need to write all of them :P
 
                 new OnboarderPage.Builder()
-                        .title("Oreo")
-                        .description("Android 8.0")
+                        .title("Intro Slide 2")
+                        .description("Agora Mobile Application")
                         .imageResourceId( R.drawable.agora)
-                        .backgroundColor(R.color.white)
-                        .titleColor(R.color.background_white)
-                        .descriptionColor(R.color.red)
+                        .backgroundColorId(R.color.green)
+                        .titleColorId(R.color.white)
+                        .descriptionColorId(R.color.white)
+                        .multilineDescriptionCentered(true)
+                        .build(),
+
+                new OnboarderPage.Builder()
+                        .title("Intro Slide 3")
+                        .description("Agora Mobile Application")
+                        .imageResourceId( R.drawable.agora)
+                        .backgroundColorId(R.color.green)
+                        .titleColorId(R.color.white)
+                        .descriptionColorId(R.color.white)
                         .multilineDescriptionCentered(true)
                         .build()
         );

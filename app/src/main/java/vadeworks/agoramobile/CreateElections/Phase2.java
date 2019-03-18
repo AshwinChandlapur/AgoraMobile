@@ -9,11 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.util.Calendar;
 
+import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 import vadeworks.agoramobile.R;
 
 /**
@@ -33,8 +36,26 @@ public class Phase2 extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_phase2, container, false);
 
-        Button button = view.findViewById(R.id.pickStartDate);
-        button.setOnClickListener(new View.OnClickListener() {
+        FloatingTextButton startDate = view.findViewById(R.id.pickStartDate);
+        EditText startDateET = view.findViewById(R.id.startDateET);
+        startDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar now = Calendar.getInstance();
+                DatePickerDialog dpd = DatePickerDialog.newInstance(
+                        (DatePickerDialog.OnDateSetListener) getActivity(),
+                        now.get(Calendar.YEAR), // Initial year selection
+                        now.get(Calendar.MONTH), // Initial month selection
+                        now.get(Calendar.DAY_OF_MONTH) // Inital day selection
+                );
+                dpd.show(getActivity().getSupportFragmentManager(), "Datepickerdialog");
+            }
+        });
+
+
+
+        FloatingTextButton endDate = view.findViewById(R.id.pickEndDate);
+        endDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar now = Calendar.getInstance();
@@ -48,6 +69,7 @@ public class Phase2 extends Fragment {
                 dpd.show(getActivity().getSupportFragmentManager(), "Datepickerdialog");
             }
         });
+
 
         return view;
     }

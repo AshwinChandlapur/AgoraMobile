@@ -28,13 +28,17 @@
            android:src="@mipmap/ic_launcher"
            android:layout_margin="5dp"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:id="@+id/createElection"
-            android:layout_height="wrap_content"
-            android:text="Create Election"
-            android:background="@color/yellow" />
+
+            <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                android:id="@+id/createElection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:floating_background_color="@color/yellow"
+                app:floating_left_icon="@drawable/ic_create_black_24dp"
+                app:floating_title="Create Election"
+                app:floating_title_color="@android:color/white"
+                />
+
         </LinearLayout>
 
         <LinearLayout
@@ -52,22 +56,30 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Total"
+                    android:text="TOTAL"
                     android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"/>
 
-                <TextView
+                <com.daasuu.cat.CountAnimationTextView
+                    android:id="@+id/total"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
-
+                    android:textSize="15sp"
+                    />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginBottom="20dp"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -78,22 +90,31 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pending"
+                    android:text="PENDING"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"/>
 
-                <TextView
+                <com.daasuu.cat.CountAnimationTextView
+                    android:id="@+id/pending"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"
+                    />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginBottom="20dp"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -104,23 +125,32 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Active"
+                    android:text="ACTIVE"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"/>
 
-                <TextView
+                <com.daasuu.cat.CountAnimationTextView
+                    android:id="@+id/active"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
+
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"
+                    />
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginBottom="20dp"></LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -130,20 +160,23 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Finished"
+                    android:text="FINISHED"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"/>
 
-                <TextView
+                <com.daasuu.cat.CountAnimationTextView
+                    android:id="@+id/finished"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textColor="@color/white"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"
+                    />
 
             </LinearLayout>
         </LinearLayout>
@@ -180,21 +213,28 @@
                 <com.loicteillard.easytabs.EasyTabTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tab1"
+                    android:text="Total"
                     android:textAllCaps="true"
                     easytabs:etab_selected_color="@color/gray"
                     />
                 <com.loicteillard.easytabs.EasyTabTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tab2"
+                    android:text="Pending"
                     android:textAllCaps="true"
                     easytabs:etab_selected_color="@color/gray"
                     />
                 <com.loicteillard.easytabs.EasyTabTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tab3"
+                    android:text="Active"
+                    android:textAllCaps="true"
+                    easytabs:etab_selected_color="@color/gray"
+                    />
+                <com.loicteillard.easytabs.EasyTabTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finished"
                     android:textAllCaps="true"
                     easytabs:etab_selected_color="@color/gray"
                     />

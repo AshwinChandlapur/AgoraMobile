@@ -19,7 +19,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="20dp"
             android:layout_gravity="center"
             android:id="@+id/card3a"
             app:cardCornerRadius="5dp"
@@ -57,13 +57,20 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Button
+
+                <ru.dimorinny.floatingtextbutton.FloatingTextButton
                     android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
                     android:layout_height="wrap_content"
+                    android:id="@+id/addCandidate"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    android:text="Add Candidate"
-                    android:id="@+id/addCandidate"/>
+                    android:layout_weight="0.5"
+                    app:layout_behavior="ru.dimorinny.floatingtextbutton.behavior.SnackbarBehavior"
+                    app:floating_background_color="@color/yellow"
+                    app:floating_left_icon="@drawable/ic_person_add_black_24dp"
+                    app:floating_title="Add Candidate"
+                    app:floating_title_color="@android:color/white"/>
 
 
             </LinearLayout>
@@ -87,12 +94,12 @@
                 android:orientation="vertical"
                 android:layout_margin="5dp">
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_margin="5dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/agora"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Candidate List"
+                    android:gravity="center"
+                    android:textSize="20sp"/>
 
                 <ListView
                     android:id="@+id/candidate_list"
@@ -103,33 +110,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="15dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/backwardCard3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="100dp"
-                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/forwardCard3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/fab_margin"
-                android:layout_marginLeft="100dp"
-                app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
-
-        </LinearLayout>
 
 
     </LinearLayout>

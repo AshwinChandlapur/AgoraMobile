@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 import vadeworks.agoramobile.R;
 
 /**
@@ -35,9 +36,6 @@ public class Phase3 extends Fragment {
 
 
         ArrayList<String> mobileArray = new ArrayList<>();
-        mobileArray.add("Android");
-        mobileArray.add("Iphone");
-
         ArrayAdapter adapter = new ArrayAdapter<String>(getContext(),
                 R.layout.activity_listview, mobileArray);
 
@@ -45,11 +43,11 @@ public class Phase3 extends Fragment {
         listView.setAdapter(adapter);
 
 
-        Button addCandidate = view.findViewById(R.id.addCandidate);
+        FloatingTextButton addCandidate = view.findViewById(R.id.addCandidate);
         addCandidate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mobileArray.add("BlueBerry");
+                mobileArray.add("CandidateName");
                 adapter.notifyDataSetChanged();
             }
         });

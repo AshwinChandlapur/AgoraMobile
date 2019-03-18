@@ -12,9 +12,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.daasuu.cat.CountAnimationTextView;
 import com.loicteillard.easytabs.EasyTabs;
 
 import androidx.viewpager.widget.ViewPager;
+import ru.dimorinny.floatingtextbutton.FloatingTextButton;
 import vadeworks.agoramobile.CreateElections.CreateElection;
 import vadeworks.agoramobile.R;
 
@@ -34,7 +36,7 @@ public class Home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
-        Button createElection = view.findViewById(R.id.createElection);
+        FloatingTextButton createElection = view.findViewById(R.id.createElection);
         createElection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,10 +56,19 @@ public class Home extends Fragment {
         easyTabs.setPagerListener(new EasyTabs.PagerListener() { // Optional, add a listener
             @Override
             public void onTabSelected(int position) {
-                Toast.makeText(getActivity(), "tab selected:"+position, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "tab selected:"+position, Toast.LENGTH_SHORT).show();
             }
         });
 
+
+        CountAnimationTextView total = view.findViewById(R.id.total);
+        total.setAnimationDuration(2000).countAnimation(0, 10);
+        CountAnimationTextView pending = view.findViewById(R.id.pending);
+        pending.setAnimationDuration(2000).countAnimation(0, 6);
+        CountAnimationTextView active = view.findViewById(R.id.active);
+        active.setAnimationDuration(2000).countAnimation(0, 2);
+        CountAnimationTextView finished = view.findViewById(R.id.finished);
+        finished.setAnimationDuration(2000).countAnimation(0, 2);
 
         return view;
     }

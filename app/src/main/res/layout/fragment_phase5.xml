@@ -51,12 +51,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Get Real Time Results"
-                        android:onClick="onCheckboxClicked"/>
+                        />
                     <CheckBox android:id="@+id/inviteVoters"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Invite Voters"
-                        android:onClick="onCheckboxClicked"/>
+                        />
                 </LinearLayout>
 
                 <TextView
@@ -78,17 +78,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ballots are completely secret and Never shown to anyone"
-                        android:onClick="q1onRadioButtonClicked"/>
+                        />
                     <RadioButton android:id="@+id/q1option2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ballots are only visible to me"
-                        android:onClick="q1onRadioButtonClicked"/>
+                        />
                     <RadioButton android:id="@+id/q1option3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ballots are visible to Everyone with Accees to Election"
-                        android:onClick="q1onRadioButtonClicked"/>
+                        />
                 </RadioGroup>
 
 
@@ -114,12 +114,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ballots are completely secret and Never shown to anyone"
-                        android:onClick="q2onRadioButtonClicked"/>
+                        />
                     <RadioButton android:id="@+id/q2option2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ballots are only visible to me"
-                        android:onClick="q2onRadioButtonClicked"/>
+                        android:text="Ballots are only visible to me" />
                 </RadioGroup>
 
             </LinearLayout>

@@ -1,6 +1,8 @@
 package vadeworks.agoramobile.CreateElections;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import com.badoualy.stepperindicator.StepperIndicator;
@@ -10,24 +12,60 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import java.util.Calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 import vadeworks.agoramobile.MainScreenFragments.FragmentAdapter_HomePage;
 import vadeworks.agoramobile.R;
+
+import static vadeworks.agoramobile.CreateElections.Phase1.electionNameString;
 
 
 public class CreateElection extends AppCompatActivity implements DatePickerDialog.OnDateSetListener,
         TimePickerDialog.OnTimeSetListener {
 
+
+    ViewPager viewpager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_election);
 
         StepperIndicator indicator = findViewById(R.id.indicator);
-        ViewPager viewpager = findViewById(R.id.viewpagerElection);
+        viewpager = findViewById(R.id.viewpagerElection);
         FragmentAdapter_CreateElections pagerAdapter = new FragmentAdapter_CreateElections(getSupportFragmentManager());
         viewpager.setAdapter(pagerAdapter);
 
+
+        Toast.makeText(getApplicationContext(),"<<<<<<<<Swipe for further steps",Toast.LENGTH_SHORT).show();
+
+        // Disables Scroll Function for ViewPager
+//        viewpager.setOnTouchListener(new View.OnTouchListener() {
+//
+//            public boolean onTouch(View arg0, MotionEvent arg1) {
+//                return true;
+//            }
+//        });
+
+        viewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//                if(position == 0) {
+//                    if(electionNameString.trim().length() == 0) {
+//                        viewpager.setCurrentItem(0);
+//                    }
+//                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         indicator.setViewPager(viewpager);
         indicator.setViewPager(viewpager, viewpager.getAdapter().getCount() - 1); //
 
@@ -225,9 +263,10 @@ public class CreateElection extends AppCompatActivity implements DatePickerDialo
 
     @Override
     public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute, int second) {
-        String date = "You picked the following date: "+hourOfDay+"/"+(minute+1)+"/"+second;
+        String date = "You picked the following time: "+hourOfDay+"/"+(minute+1)+"/"+second;
         Toast.makeText(getApplicationContext(),date,Toast.LENGTH_SHORT).show();
     }
+
 
 //
 //    public void onCheckboxClicked(View view) {

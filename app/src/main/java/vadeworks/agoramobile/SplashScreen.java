@@ -53,7 +53,7 @@ public class SplashScreen extends AppCompatActivity {
                 }
                 SplashScreen.this.finish();
             }
-        }, 5000);
+        }, 2000);
 
     }
 
